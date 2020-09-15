@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { LoginComponent } from './account/auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { UIModule } from './shared/ui/ui.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
+    UIModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
