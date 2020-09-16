@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UIModule } from './shared/ui/ui.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UIModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({}, {}),
-    NgbModule
+    EffectsModule.forRoot([]),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
