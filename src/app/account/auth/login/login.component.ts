@@ -65,6 +65,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
     }
 
     this.loading = true;
-    this.authenticationService.login()
+    this._store.dispatch(new fromStore.Login())
   }
 }

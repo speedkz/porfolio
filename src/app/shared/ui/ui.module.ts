@@ -2,18 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FeatherIconDirective } from './feather-icon.directive';
-import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [FeatherIconDirective],
     imports: [
         CommonModule,
         FormsModule,
-        MatSliderModule
+        MatCardModule,
+        NgbAlertModule,
     ],
     exports: [
         FeatherIconDirective,
-        MatSliderModule
+        MatCardModule,
+        NgbAlertModule,
     ]
 })
 export class UIModule { }
