@@ -26,8 +26,6 @@ export function AuthReducer(state = AuthInitialState, action: AuthActions.AuthsA
       }
     case AuthActions.LOGIN_SUCCESS:
       const users = action.payload;
-      alert(users)
-
       return {
         ...state,
         loading: false,

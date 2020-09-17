@@ -2,31 +2,41 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
+interface CreateUser {
+  email: string
+  fullname: string
+  phone: string
+  gender: boolean
+}
+
 @Component({
   selector: 'app-dialog-create-user',
   templateUrl: './dialog-create-user.component.html',
   styleUrls: ['./dialog-create-user.component.scss']
 })
 export class DialogCreateUserComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
-
   formFields: Array<any> = [
     {
       formControl: new FormControl('', [Validators.required, Validators.email]),
       label: "Enter your email",
       placeholder: "pat@example.com",
+      model: 'email'
     },
     {
       formControl: new FormControl('', [Validators.required]),
       label: "Enter your full name",
       placeholder: "",
+      model: 'fullname'
     },
     {
       formControl: new FormControl('', [Validators.required]),
       label: "Enter your phone",
       placeholder: "",
+      model: 'phone'
     },
   ]
+
+  user = {} as CreateUser
 
   constructor(
     public dialogRef: MatDialogRef<DialogCreateUserComponent>,
@@ -40,11 +50,11 @@ export class DialogCreateUserComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
+  getErrorMessage(validator) {
+    if (validator.hasError('required')) {
       return 'You must enter a value';
     }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+    return validator.hasError('email') ? 'Not a valid email' : '';
   }
 }

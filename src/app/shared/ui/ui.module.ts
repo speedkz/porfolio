@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
+import { MatRadioModule } from '@angular/material/radio'
+
 
 @NgModule({
     declarations: [FeatherIconDirective, PageTitleComponent],
@@ -21,6 +23,7 @@ import { MatInputModule } from '@angular/material/input'
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
+        MatRadioModule,
         MatCardModule,
         MatTableModule,
         MatPaginatorModule,
@@ -36,6 +39,7 @@ import { MatInputModule } from '@angular/material/input'
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
+        MatRadioModule,
         FeatherIconDirective,
         MatCardModule,
         MatTableModule,

@@ -3,11 +3,16 @@
   <div fxLayout="column" fxLayoutGap="12px">
     <mat-form-field appearance="fill" *ngFor="let field of formFields">
       <mat-label>{{field.label}}</mat-label>
-      <input matInput [placeholder]="field.placeholder" [formControl]="field.formControl" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      <input [(ngModel)]="user[field.model]" matInput [placeholder]="field.placeholder"
+        [formControl]="field.formControl" required>
+      <mat-error *ngIf="field.formControl.invalid">{{getErrorMessage(field.formControl)}}</mat-error>
     </mat-form-field>
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="user.gender">
+      <mat-radio-button [value]="true">Male</mat-radio-button>
+      <mat-radio-button class="ml-4" [value]="false">Female</mat-radio-button>
+    </mat-radio-group>
   </div>
 </div>
 <div mat-dialog-actions fxLayoutAlign="end start">
-  <button mat-raised-button color="primary">Create</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="user">Create</button>
 </div>
