@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EffectsModule } from '@ngrx/effects';
 import { LayoutsModule } from './layouts/layouts.module';
@@ -18,8 +16,6 @@ import { LayoutsModule } from './layouts/layouts.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    FlexLayoutModule,
     LayoutsModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({}, {}),

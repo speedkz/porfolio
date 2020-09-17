@@ -2,9 +2,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as fromStore from 'app/store/account';
-import * as usersActions from "app/store/account/actions"
-
-import { AuthenticationService } from '../../../core/services/auth.serivce';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -26,7 +23,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   constructor(
     private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router,
-    private authenticationService: AuthenticationService,
     private _store: Store<fromStore.AccountState>
   ) {
     this.users$ = this._store.pipe(select(fromStore.getUsersArr))
