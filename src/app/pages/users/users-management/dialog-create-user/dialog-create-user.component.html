@@ -1,7 +1,7 @@
 <h1 mat-dialog-title>Create new user</h1>
 <div mat-dialog-content>
   <div fxLayout="column" fxLayoutGap="12px">
-    <mat-form-field appearance="fill" *ngFor="let field of formFields">
+    <mat-form-field appearance="outline" *ngFor="let field of formFields">
       <mat-label>{{field.label}}</mat-label>
       <input [(ngModel)]="user[field.model]" matInput [placeholder]="field.placeholder"
         [formControl]="field.formControl" required>

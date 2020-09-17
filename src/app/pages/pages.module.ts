@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UIModule } from 'app/shared/ui/ui.module';
 import { UsersModule } from './users/users.module';
+import { BaoCaoModule } from './bao-cao/bao-cao.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { UsersModule } from './users/users.module';
     CommonModule,
     UIModule,
     PagesRoutingModule,
-    UsersModule
+    UsersModule,
+    BaoCaoModule
   ]
 })
 export class PagesModule { }

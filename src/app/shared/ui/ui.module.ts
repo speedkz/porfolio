@@ -13,7 +13,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
 import { MatRadioModule } from '@angular/material/radio'
-
+import { MatTabsModule } from '@angular/material/tabs'
+import { MatIconModule } from '@angular/material/icon'
+import { MatSortModule } from '@angular/material/sort';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
     declarations: [FeatherIconDirective, PageTitleComponent],
@@ -24,6 +27,10 @@ import { MatRadioModule } from '@angular/material/radio'
         MatFormFieldModule,
         MatInputModule,
         MatRadioModule,
+        MatIconModule,
+        MatSortModule,
+        MatCheckboxModule,
+        MatTabsModule,
         MatCardModule,
         MatTableModule,
         MatPaginatorModule,
@@ -40,7 +47,11 @@ import { MatRadioModule } from '@angular/material/radio'
         MatFormFieldModule,
         MatInputModule,
         MatRadioModule,
+        MatIconModule,
+        MatSortModule,
+        MatCheckboxModule,
         FeatherIconDirective,
+        MatTabsModule,
         MatCardModule,
         MatTableModule,
         MatPaginatorModule,

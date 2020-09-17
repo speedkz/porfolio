@@ -28,4 +28,22 @@ export const MENU: MenuItem[] = [
             },
         ]
     },
+    {
+        label: 'Báo cáo',
+        icon: 'file-text',
+        subItems: [
+            {
+                label: 'Báo cáo đơn vị',
+                link: '/bao-cao-don-vi',
+            },
+            {
+                label: 'Báo cáo tổng hợp',
+                link: '/bao-cao-tong-hop',
+            },
+            {
+                label: 'Báo cáo sở tài chính',
+                link: '/bao-cao-so-tai-chinh',
+            },
+        ]
+    },
 ];
